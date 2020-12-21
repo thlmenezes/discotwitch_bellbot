@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/thlmenezes/discotwitch_bellboy/issues"
   },
-  "homepage": "https://github.com/thlmenezes/discotwitch_bellboy#readme"
+  "homepage": "https://github.com/thlmenezes/discotwitch_bellboy#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
