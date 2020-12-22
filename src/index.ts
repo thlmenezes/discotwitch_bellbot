@@ -1,0 +1,1 @@
+console.log(`oit ${process.env.BOT_TOKEN}`);

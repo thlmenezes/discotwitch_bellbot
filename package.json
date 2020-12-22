@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "DOTENV_CONFIG_PATH=./env node -r dotenv/config your_script.js"
+    "dev:server": "ts-node-dev --respawn --transpile-only -r dotenv/config src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/thlmenezes/discotwitch_bellboy#readme",
   "dependencies": {
+    "@types/node": "^14.14.14",
     "dotenv": "^8.2.0"
   },
   "devDependencies": {
