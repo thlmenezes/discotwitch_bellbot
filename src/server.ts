@@ -11,7 +11,8 @@ class Server {
   }
 
   private middlewares() {
-    this.express.use(express.json());this.express.use(cors());
+    this.express.use(express.json());
+    this.express.use(cors());
   }
 
   // private database() {}
