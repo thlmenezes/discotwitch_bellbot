@@ -4,9 +4,10 @@
 		"node": true
 	},
 	"extends": [
+		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
-		"prettier/@typescript-eslint",
-		"eslint:recommended"
+		"prettier",
+		"prettier/@typescript-eslint"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -14,6 +15,7 @@
 		"sourceType": "module"
 	},
 	"plugins": ["@typescript-eslint"],
+  "root": true,
 	"rules": {
 		"brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
 		"comma-dangle": ["error", "always-multiline"],
@@ -24,6 +26,7 @@
 		"comma-style": "error",
 		"curly": ["error", "multi-line", "consistent"],
 		"dot-location": ["error", "property"],
+		"func-call-spacing": "error",
 		"handle-callback-err": "off",
 		"indent": ["error", 2],
 		"max-nested-callbacks": ["error", { "max": 4 }],
@@ -52,6 +55,11 @@
 		"space-infix-ops": "error",
 		"space-unary-ops": "error",
 		"spaced-comment": "error",
+		// NOTE: Removing @typescript-eslint results in error rule not found 
+		"@typescript-eslint/type-annotation-spacing": ["error", {
+			"before": false,
+			"after": true
+		}],
 		"yoda": "error"
 	}
 }
