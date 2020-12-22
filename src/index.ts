@@ -1,1 +1,1 @@
-console.log(`oit ${process.env.BOT_TOKEN}`);
+console.log(`BOT: oi`);
