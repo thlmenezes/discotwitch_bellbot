@@ -65,7 +65,7 @@
       "error",
       {
         "anonymous": "never",
-        "named": "never",
+        "named": "always",
         "asyncArrow": "always"
       }
     ],
