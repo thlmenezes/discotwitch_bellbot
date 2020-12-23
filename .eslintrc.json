@@ -17,6 +17,11 @@
 	"plugins": ["@typescript-eslint"],
   "root": true,
 	"rules": {
+		"arrow-body-style": ["error", "as-needed"],
+		"arrow-spacing": ["error",{
+			"before": true,
+			"after": true
+		}],
 		"brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
 		"comma-dangle": ["error", "always-multiline"],
 		"comma-spacing": ["error", {
