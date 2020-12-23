@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "compile": "babel src --extensions \".js,.ts,.tsx\" --out-dir dist --copy-files --no-copy-ignored",
     "delete:src": "rm -rf src",
     "delete:build": "rm -rf dist",
     "start": "node dist/index.js",
     "build": "yarn compile && yarn delete:src",
+    "compile": "babel src --extensions \".js,.ts,.tsx\" --out-dir dist --copy-files --no-copy-ignored",
     "dev:server": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify -r dotenv/config -r tsconfig-paths/register src/index.ts"
   },
   "repository": {
