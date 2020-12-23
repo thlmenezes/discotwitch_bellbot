@@ -10,7 +10,7 @@
     "start": "node dist/index.js",
     "build": "yarn compile && yarn delete:src",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:server": "ts-node-dev --respawn --transpile-only -r dotenv/config src/index.ts"
+    "dev:server": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify -r dotenv/config src/index.ts"
   },
   "repository": {
     "type": "git",
