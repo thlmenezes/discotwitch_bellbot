@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "compile": "npx tsc",
+    "compile": "babel src --extensions \".js,.ts,.tsx\" --out-dir dist --copy-files --no-copy-ignored",
     "delete:src": "rm -rf src",
     "delete:build": "rm -rf dist",
     "start": "node dist/index.js",
@@ -29,12 +29,18 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
     "@types/cors": "^2.8.9",
     "@types/express": "^4.17.9",
     "@types/jest": "^26.0.19",
     "@types/node": "^14.14.14",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.0",
