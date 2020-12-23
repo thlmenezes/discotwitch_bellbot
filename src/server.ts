@@ -18,9 +18,7 @@ class Server {
   // private database() {}
 
   private routes() {
-    this.express.get('/', (req, res) => {
-      return res.send('Hello World');
-    });
+    this.express.get('/', (req, res) => res.send('Hello World'));
   }
 }
 
