@@ -4,9 +4,9 @@ import { pathsToModuleNameMapper } from 'ts-jest/utils';
 export default {
   clearMocks: true,
   collectCoverageFrom: [
-    '<rootDir>/src/services/**/*.ts',
+    '<rootDir>/src/**/*.ts',
   ],
-  coverageDirectory: '<rootDir>/src/tests/coverage',
+  coverageDirectory: '<rootDir>/tests_coverage',
   coverageReporters: [
     'json',
     'lcov',
@@ -16,6 +16,6 @@ export default {
   preset: 'ts-jest',
   testEnvironment: 'node',
   testMatch: [
-    '<rootDir>/src/tests/**/*.spec.ts',
+    '<rootDir>/src/**/*.spec.ts',
   ],
 };
