@@ -26,7 +26,7 @@
       }
     ],
     "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
-    "comma-dangle": ["error", "always-multiline"],
+    "comma-dangle": ["error", "never"],
     "comma-spacing": [
       "error",
       {
