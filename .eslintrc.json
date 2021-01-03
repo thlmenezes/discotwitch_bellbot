@@ -14,7 +14,10 @@
     "ecmaVersion": 2019,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-import-helpers"
+  ],
   "root": true,
   "rules": {
     "arrow-body-style": ["error", "as-needed"],
@@ -39,6 +42,18 @@
     "dot-location": ["error", "property"],
     "func-call-spacing": "error",
     "handle-callback-err": "off",
+    "import-helpers/order-imports": [
+      "error",
+      {
+          "newlinesBetween": "always",
+          "groups": [
+              "module",
+              "/^~/",
+              ["parent", "sibling", "index"]
+          ],
+          "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ],
     "indent": ["error", 2],
     "key-spacing": "error",
     "max-nested-callbacks": ["error", { "max": 4 }],
