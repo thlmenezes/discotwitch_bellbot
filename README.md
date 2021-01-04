@@ -7,6 +7,7 @@ Discord BOT that send updates about twitch streams using webhooks
   - [ ] Describe Project
   - [ ] List Dependencies
   - [ ] Add Context Map
+  - [ ] Describe CONTRIBUTING
 - [ ] CI
   - [ ] GitHub Actions
     - [ ] Pull Request
