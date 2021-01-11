@@ -1,8 +1,8 @@
 # DDD Notes
 
 - [Ubiquitous Language](#ubiquitous-language)
-- [Use Cases](#use-cases)
 - [Context Map](#context-map)
+- [Use Cases](#use-cases)
 
 # Ubiquitous Language
 
@@ -16,6 +16,10 @@
 | Command      | Messages directed to the app by users                        |
 | Streamer     | Twitch user, read more about [twitch.tv](https://twitch.tv/) |
 | Notification | App messages triggered by Twitch events                      |
+
+# Context Map
+
+![](ddd.context_map.png)
 
 # Use Cases
 
@@ -54,7 +58,3 @@
 
 - [ ] User can ask for streamers list
 - [ ] User can ask for streamer status
-
-# Context Map
-
-![](ddd.context_map.png)
