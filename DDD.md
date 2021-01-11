@@ -6,37 +6,16 @@
 
 # Ubiquitous Language
 
-## Server
-
->  Discord server, read more about [discord.com](https://discord.com/)
-
-## Channel
-
->  Server text channel
-
-## User
-
->  Anyone that has access to channels
-
-## Owner
-
->  User that created the server
-
-## Moderator
-
->  Roles that can interact with app settings, have less privilege than owner
-
-## Command
-
->  Messages directed to the app by users
-
-## Streamer
-
->  Twitch user, read more about [twitch.tv](https://twitch.tv/)
-
-## Notification
-
->  App messages triggered by some twitch event
+|              | Description                                                  |
+| ------------ | ------------------------------------------------------------ |
+| Server       | Discord server, read more about [discord.com](https://discord.com/) |
+| Channel      | Server text channel                                          |
+| User         | Anyone that has access to channels                           |
+| Owner        | User that created the server                                 |
+| Moderator    | Roles that can interact with app settings, have less privilege than owner |
+| Command      | Messages directed to the app by users                        |
+| Streamer     | Twitch user, read more about [twitch.tv](https://twitch.tv/) |
+| Notification | App messages triggered by Twitch events                      |
 
 # Use Cases
 
