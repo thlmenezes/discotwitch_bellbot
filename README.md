@@ -1,4 +1,4 @@
-# discotwitch_bellboy
+# discotwitch_bellbot
 Discord BOT that send updates about twitch streams using webhooks
 
 # ROADMAP
