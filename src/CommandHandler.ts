@@ -17,5 +17,6 @@ export default function commandHandler (message: Message): void {
   // Executing
   const result_command = commands.get(command) || ((arg: string[]) => "Invalid Command")
   // Echo response
-  message.channel.send(result_command(args))
+  message.reply(result_command(args))
+  // NOTE: use message.channel.send() to notifications
 }
