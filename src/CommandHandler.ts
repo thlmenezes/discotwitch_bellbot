@@ -19,7 +19,7 @@ export default function commandHandler (message: Message): void {
   const args = message.content.slice(prefix.length).trim().split(/ +/)
   const command = args.shift()?.toLowerCase() || ""
   // Executing
-  const { execute: result_command } = commands.get(command) || ({ execute: (arg: string[]) => "Invalid Command" })
+  const { execute: result_command } = commands.get(command) || ({ execute: (arg: string[]) => `Invalid Command\n${arg}` })
   // Echo response
   message.reply(result_command(args))
   // NOTE: use message.channel.send() to notifications
