@@ -1,25 +1,16 @@
-import { DMChannel, Message } from "discord.js"
+import { Message } from "discord.js"
+import fileSystem from "fs"
 
 
 const prefix = "!"
-const commands = new Map([
-  ["ping", (args: string[], message: Message) => "Pong"],
-  ["pong", (args: string[], message: Message) => "Ping"],
-  ["test", (args: string[], message: Message) => `args: ${args.join(",")}\nlen(args) ${args.length}`],
-  ["prune", (args: string[], message: Message) => {
-    const num = parseInt(args[0])
-    if (isNaN(num)) return "Not a Number"
+const commands = new Map()
+const command_files = fileSystem.readdirSync("src/commands").filter(file => file.endsWith(".ts"))
 
-    if (message.channel instanceof DMChannel) return "Invalid Channel"
-
-    message.channel.bulkDelete(Math.min(num, 10), true).catch(err => {
-      console.error(err)
-      message.channel.send("there was an error trying to prune messages in this channel!")
-    })
-
-    return "done"
-  }]
-])
+command_files.forEach(async file => {
+  const { default: command } = await import(`src/commands/${file}`)
+  const basename = file.split(".").shift()
+  commands.set(basename, command)
+})
 
 export default function commandHandler (message: Message): void {
   // Filtering
@@ -28,8 +19,8 @@ export default function commandHandler (message: Message): void {
   const args = message.content.slice(prefix.length).trim().split(/ +/)
   const command = args.shift()?.toLowerCase() || ""
   // Executing
-  const result_command = commands.get(command) || ((arg: string[]) => "Invalid Command")
+  const { execute: result_command } = commands.get(command) || ({ execute: (arg: string[]) => "Invalid Command" })
   // Echo response
-  message.reply(result_command(args, message))
+  message.reply(result_command(args))
   // NOTE: use message.channel.send() to notifications
 }
