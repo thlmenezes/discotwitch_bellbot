@@ -7,14 +7,16 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "plugin:import/errors",
+    "plugin:import/warnings"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2019,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers"],
+  "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "import"],
   "root": true,
   "rules": {
     "arrow-body-style": ["error", "as-needed"],
@@ -39,6 +41,7 @@
     "dot-location": ["error", "property"],
     "func-call-spacing": "error",
     "handle-callback-err": "off",
+    "import/newline-after-import": ["error", { "count": 2 }],
     "import-helpers/order-imports": [
       "error",
       {
