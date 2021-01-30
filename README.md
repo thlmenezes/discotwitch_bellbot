@@ -1,6 +1,10 @@
 # discotwitch_bellbot
 Discord BOT that send updates about twitch streams using webhooks
 
+# Use Cases and Design notes
+
+See [DDD.md](./DDD.md) for more information
+
 # ROADMAP
 
 ## Implementation
